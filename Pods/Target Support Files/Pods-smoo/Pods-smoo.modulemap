@@ -1,0 +1,6 @@
+framework module Pods_smoo {
+  umbrella header "Pods-smoo-umbrella.h"
+
+  export *
+  module * { export * }
+}

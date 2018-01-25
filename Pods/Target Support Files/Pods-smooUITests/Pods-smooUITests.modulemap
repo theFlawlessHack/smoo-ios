@@ -1,0 +1,6 @@
+framework module Pods_smooUITests {
+  umbrella header "Pods-smooUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
