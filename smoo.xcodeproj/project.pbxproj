@@ -97,11 +97,10 @@
 		4C02158F201A2E19003FE351 /* smoo */ = {
 			isa = PBXGroup;
 			children = (
+				4C0215C1201A2F31003FE351 /* models */,
+				4C0215C0201A2F1F003FE351 /* resources */,
+				4C0215BE201A2F04003FE351 /* controllers */,
 				4C021590201A2E19003FE351 /* AppDelegate.swift */,
-				4C021592201A2E19003FE351 /* ViewController.swift */,
-				4C021594201A2E19003FE351 /* Main.storyboard */,
-				4C021597201A2E19003FE351 /* Assets.xcassets */,
-				4C021599201A2E19003FE351 /* LaunchScreen.storyboard */,
 				4C02159C201A2E19003FE351 /* Info.plist */,
 			);
 			path = smoo;
@@ -123,6 +122,39 @@
 				4C0215B2201A2E1A003FE351 /* Info.plist */,
 			);
 			path = smooUITests;
+			sourceTree = "<group>";
+		};
+		4C0215BE201A2F04003FE351 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C021592201A2E19003FE351 /* ViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		4C0215BF201A2F10003FE351 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4C021599201A2E19003FE351 /* LaunchScreen.storyboard */,
+				4C021594201A2E19003FE351 /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		4C0215C0201A2F1F003FE351 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C0215BF201A2F10003FE351 /* storyboard */,
+				4C021597201A2E19003FE351 /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		4C0215C1201A2F31003FE351 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
