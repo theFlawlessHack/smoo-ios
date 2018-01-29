@@ -18,7 +18,6 @@ class CameraController: UIViewController, UINavigationControllerDelegate, UIImag
             print("issue")
         }
         
-        
         self.dismiss(animated: true , completion: nil)
     }
     

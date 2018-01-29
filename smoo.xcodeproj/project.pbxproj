@@ -16,6 +16,8 @@
 		4C0215A6201A2E1A003FE351 /* smooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0215A5201A2E1A003FE351 /* smooTests.swift */; };
 		4C0215B1201A2E1A003FE351 /* smooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0215B0201A2E1A003FE351 /* smooUITests.swift */; };
 		4C0215FD201A635B003FE351 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0215FC201A635B003FE351 /* CameraController.swift */; };
+		4CE69E5D201F7B19000C6334 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE69E5C201F7B19000C6334 /* IntroController.swift */; };
+		4CE69E5F201F8E88000C6334 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE69E5E201F8E88000C6334 /* UserTableViewController.swift */; };
 		8AF426CD01B6149429313F29 /* Pods_smoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9E36D821789232FF368406 /* Pods_smoo.framework */; };
 		8E11E4412360534F150DFAF5 /* Pods_smooUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA050324976CE6A0A02E96D /* Pods_smooUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		4C0215B0201A2E1A003FE351 /* smooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smooUITests.swift; sourceTree = "<group>"; };
 		4C0215B2201A2E1A003FE351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0215FC201A635B003FE351 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		4CE69E5C201F7B19000C6334 /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		4CE69E5E201F8E88000C6334 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = smoo/controllers/UserTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		4E3431DF3A617C899C899808 /* Pods-smooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smooTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smooTests/Pods-smooTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA050324976CE6A0A02E96D /* Pods_smooUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smooUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA9FD0FD332DA20A31B89DA /* Pods-smoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-smoo/Pods-smoo.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			children = (
 				4C021592201A2E19003FE351 /* ViewController.swift */,
 				4C0215FC201A635B003FE351 /* CameraController.swift */,
+				4CE69E5E201F8E88000C6334 /* UserTableViewController.swift */,
+				4CE69E5C201F7B19000C6334 /* IntroController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -495,6 +501,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE69E5F201F8E88000C6334 /* UserTableViewController.swift in Sources */,
+				4CE69E5D201F7B19000C6334 /* IntroController.swift in Sources */,
 				4C0215FD201A635B003FE351 /* CameraController.swift in Sources */,
 				4C021593201A2E19003FE351 /* ViewController.swift in Sources */,
 				4C021591201A2E19003FE351 /* AppDelegate.swift in Sources */,

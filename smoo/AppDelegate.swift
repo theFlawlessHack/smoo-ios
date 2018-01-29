@@ -22,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let parseConfig = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
             ParseMutableClientConfiguration.applicationId = "app_id"
-            ParseMutableClientConfiguration.clientKey = "master_key"
+            ParseMutableClientConfiguration.clientKey = "client_key"
             ParseMutableClientConfiguration.server = "server_url"
         })
         
         Parse.initialize(with: parseConfig)
         
-        PFUser.enableAutomaticUser()
+//        PFUser.enableAutomaticUser()
         let defaultACL = PFACL()
         
         defaultACL.getPublicReadAccess = true
