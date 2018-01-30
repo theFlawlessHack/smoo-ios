@@ -15,9 +15,59 @@ class UserTableViewController: UITableViewController {
     var userIDs = [""]
     var isFollowing = ["" : false]
     
+    var refresher: UIRefreshControl!
+    
     @IBAction func logout(_ sender: Any) {
         PFUser.logOut()
         performSegue(withIdentifier: "showLogin", sender: self)
+    }
+    
+    @objc func refresh () {
+        let query = PFUser.query()
+        query?.findObjectsInBackground(block: { (objects, error) in
+            
+            if error != nil {
+                print(error)
+                
+            } else if let users = objects {
+                
+                self.usernames.removeAll()
+                self.userIDs.removeAll()
+                self.isFollowing.removeAll()
+                
+                for object in users {
+                    if let user = object as? PFUser {
+                        
+                        if user.objectId != PFUser.current()?.objectId {
+                            
+                            let usernameArray = user.username?.components(separatedBy: "@")
+                            self.usernames.append(usernameArray![0])
+                            self.userIDs.append(user.objectId!)
+                            
+                            let query = PFQuery(className: "Followers")
+                            query.whereKey("follower", equalTo: PFUser.current()?.objectId!)
+                            query.whereKey("following", equalTo: user.objectId!)
+                            
+                            query.findObjectsInBackground(block: { (objects, error) in
+                                if let objects = objects {
+                                    if objects.count > 0 {
+                                        self.isFollowing[user.objectId!] = true
+                                    } else {
+                                        self.isFollowing[user.objectId!] = false
+                                    }
+                                    
+                                    if self.isFollowing.count == self.usernames.count {
+                                        self.tableView.reloadData()
+                                        self.refresher.endRefreshing()
+                                    }
+                                }
+                            })
+                        }
+                    }
+                }
+            }
+        })
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,49 +83,12 @@ class UserTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let query = PFUser.query()
-        query?.findObjectsInBackground(block: { (objects, error) in
-            
-            if error != nil {
-                print(error)
-            
-            } else if let users = objects {
-                
-                self.usernames.removeAll()
-                self.userIDs.removeAll()
-                self.isFollowing.removeAll()
-                
-                for object in users {
-                    if let user = object as? PFUser {
-                        
-                        if user.objectId != PFUser.current()?.objectId {
-                        
-                        let usernameArray = user.username?.components(separatedBy: "@")
-                        self.usernames.append(usernameArray![0])
-                        self.userIDs.append(user.objectId!)
-                        
-                        let query = PFQuery(className: "Followers")
-                        query.whereKey("follower", equalTo: PFUser.current()?.objectId!)
-                        query.whereKey("following", equalTo: user.objectId!)
-                        
-                        query.findObjectsInBackground(block: { (objects, error) in
-                            if let objects = objects {
-                                if objects.count > 0 {
-                                    self.isFollowing[user.objectId!] = true
-                                } else {
-                                    self.isFollowing[user.objectId!] = false
-                                }
-                                
-                                if self.isFollowing.count == self.usernames.count {
-                                    self.tableView.reloadData()
-                                }
-                            }
-                        })
-                    }
-                    }
-                }
-            }
-        })
+        refresh()
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refresher.addTarget(self, action: #selector(UserTableViewController.refresh), for: UIControlEvents.valueChanged)
+        
+        tableView.addSubview(refresher)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Jessica/Documents/ImFlawless/PER./smoo-ios/smoo/controllers/FeedTableViewCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:smoo.xcodeproj">
    </FileRef>
    <FileRef
