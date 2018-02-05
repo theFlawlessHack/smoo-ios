@@ -65,7 +65,7 @@
 		4CE69E5C201F7B19000C6334 /* IntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
 		4CE69E5E201F8E88000C6334 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = smoo/controllers/UserTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		4CE69E9A20209C06000C6334 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = smoo/controllers/PostViewController.swift; sourceTree = SOURCE_ROOT; };
-		4CE69E9C2020A471000C6334 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedTableViewController.swift; path = controllers/FeedTableViewController.swift; sourceTree = "<group>"; };
+		4CE69E9C2020A471000C6334 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		4CE69EA22020A59B000C6334 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedTableViewCell.swift; path = "/Users/Jessica/Documents/ImFlawless/PER./smoo-ios/smoo/controllers/FeedTableViewCell.swift"; sourceTree = "<absolute>"; };
 		4E3431DF3A617C899C899808 /* Pods-smooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smooTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smooTests/Pods-smooTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA050324976CE6A0A02E96D /* Pods_smooUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smooUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +141,6 @@
 				4C0215BE201A2F04003FE351 /* controllers */,
 				4C021590201A2E19003FE351 /* AppDelegate.swift */,
 				4C02159C201A2E19003FE351 /* Info.plist */,
-				4CE69E9C2020A471000C6334 /* FeedTableViewController.swift */,
 			);
 			path = smoo;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4C021592201A2E19003FE351 /* ViewController.swift */,
+				4CE69E9C2020A471000C6334 /* FeedTableViewController.swift */,
 				4CE69EA22020A59B000C6334 /* FeedTableViewCell.swift */,
 				4CE69E9A20209C06000C6334 /* PostViewController.swift */,
 				4C0215FC201A635B003FE351 /* CameraController.swift */,
