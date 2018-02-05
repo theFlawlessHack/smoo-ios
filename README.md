@@ -10,3 +10,6 @@ That being said, pulling this project you will be able to:<br>
 - Post to your Feed
 - View your Feed based on who you're Following
 
+## Running smoo
+
+In the AppDelegate.swift, you must input your parse server information. App ID, App Key, and server URL and you're set to go!
