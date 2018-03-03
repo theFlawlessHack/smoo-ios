@@ -1,4 +1,4 @@
-# smoo-ios
+# Smoo
 
 <b>Bonjour.</b> Welcome to Smoo.<br>
 Smoo is a native iOS application with a Parse Server and AWS backend.
